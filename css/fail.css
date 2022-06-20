@@ -1,0 +1,15 @@
+.bad{
+	font-size: 2em;
+	text-align: center;
+	width: 100%;
+	padding: 12px;
+	background-image: linear-gradient(260deg, #FF0832, #ED073A, #DB0542, #CA044B, #B80353, #A6015B, #940063
+    );
+	color: #fff;
+    margin-bottom: -3em;
+}
+@media (max-width: 600px){
+	.bad{
+		font-size: 1.3em;
+	}
+}

@@ -1,0 +1,323 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans&display=swap");
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    height: 100%;
+}
+.grid-container{
+    font-family: "Public Sans", sans-serif;
+    font-size: 1.1em;
+    background-color: #052968;
+    background-size: 500%;
+    min-height: 100%;
+}
+
+.grid-container > * {
+    box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+    padding: 0.6em;
+    text-align: center;
+}
+.grid-container {
+    display: grid;
+    gap: 0.3em;
+    grid-template-rows: auto auto auto 20% auto;
+    grid-template-areas: 
+        "header header"
+        "navbar navbar"
+        "main main"
+        "sidebar sidebar"
+        "footer footer";
+}
+.header{
+    grid-area: header;
+    background-color: #000D2A;
+    text-align: right;
+   
+}
+
+.navbar{
+    grid-area: navbar;
+    background-color: azure;
+    height: auto;
+}
+
+.sidebar{
+    grid-area: sidebar;
+    background-image: linear-gradient(240deg, #00FFED, #0BEAF0, #15D5F3, #20C0F6, #2AABF9, #3496FC, #3F81FF
+    );
+    height: auto;
+}
+.main{
+    grid-area: main;
+    background-image: linear-gradient(-15deg, #0099AA, #008295, #006A7F, #00536A, #003C55, #00243F, #000D2A
+        );
+    height: auto;
+}
+.footer{
+    grid-area: footer;
+    background-color: #28285f;
+}
+@media (min-width: 600px){
+    .grid-container{
+        grid-template-columns: 15% auto;
+        grid-template-rows: 6em auto auto 1px ;
+        grid-template-areas: 
+        "header header"
+        "navbar main"
+        "sidebar sidebar"
+        "footer footer"
+        ;
+    }
+}
+
+   
+}
+main{
+    display: flex;
+    gap: 10px;
+    box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 4px;
+    padding: 10em;
+    text-align: center;
+   
+}
+
+button{
+    width: 17%;
+    height: 3em;
+    border: solid;
+    border-color: #00ffed;
+    background-color: transparent;
+    border-radius: 0.7em;
+    border-width: 0.1em;
+    margin-top: 1.8em;
+    margin-right: 1.5em;
+}
+@media (max-width: 800px){
+    button{
+        width: 20%
+    }
+}
+@media (max-width: 369px){
+    button{
+        width: 30%;
+    }
+    .cpadiv{
+        font-size: 0.8em;
+    }
+}
+.header{
+    display: grid;
+    width: 100%;
+    flex-wrap: wrap;
+    grid-template-columns: 10% 90%;
+
+}
+.logo{
+    background-color: transparent;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-right: -1.4em;
+    margin-top: -0.8em;
+
+}
+.indicadores{
+    display: grid;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 0.3em;
+    padding: 0.4em;
+    border-radius: 0.5em;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: transparent;
+}
+.cpadiv{
+    width: 95%;
+    height: auto;
+    background-image: linear-gradient(90deg, #00FFED, #00F3F0, #00E6F2, #00DAF5, #00CEF7, #00C1F9, #00B5FC);
+    border-radius: 10px;
+    padding-bottom: 1em;
+}
+
+
+
+.sidebar{
+    font-size: 10px;
+    text-align: left;
+}
+
+.navbar{
+    display: grid;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 0.1em;
+    grid-template-rows: repeat(3, 1fr);
+    background-image: linear-gradient(240deg, #00FFED, #0BEAF0, #15D5F3, #20C0F6, #2AABF9, #3496FC, #3F81FF
+    );
+}
+.iconos__img{
+    width: 50%;
+    background-color: transparent;
+
+}
+.icono_title{
+    font-size: 0.6em;
+    color: #052968;
+
+}
+a{
+    width: 100%;
+}
+.pgl{
+    width: 100%;
+}
+
+
+.opcion{
+    height: auto;
+    width: 100%;
+    background-color: transparent;   
+}
+
+@media (max-width: 600px){
+    .navbar{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .indicadores{
+        grid-template-columns: repeat(2, 1fr);
+        height: 97%;
+    }
+    .navbar{
+        margin-bottom: -1.6em; 
+        height: 3em;      
+    }
+    .iconos__img{
+        width: 2.2em;
+        margin-top: -0.6em;
+    }
+    .icono_title{
+        font-size: 0.7em;
+        margin-top: -1em;
+        font-weight: 300;
+        color: #052968;
+    }
+    .menu{
+        
+        margin-bottom: 0.5em;
+    }
+    button{
+        margin-top:  0.5em;
+        margin-bottom: -3em;
+        width: 8em;
+        color: #00FFED;
+    }
+    .header{
+        height: 100%;
+    }
+    .logo{
+        margin-left: 0.5em;
+        margin-top: 0.6em;
+        width: 100%;
+    }
+    .main{
+        height: 105%;
+        background-image: linear-gradient(-15deg, #0099AA, #008295, #006A7F, #00536A, #003C55, #00243F, #000D2A
+        );
+        margin-top: 1em;
+        padding-bottom: 1em;
+    }
+    .sidebar{
+        margin-top: 0.5em;
+    }
+    
+}
+
+.marguen{
+    display: grid;
+    width: 90%;
+    height: 30%;
+    flex-wrap: wrap;
+    gap:5px;
+    border-radius: 6px;
+    grid-template-columns: repeat(2, 1fr);
+    margin-left: 5%;
+    margin-top: 1em;   
+}
+@media (max-width: 600px){
+    .marguen{
+        margin-top: 0.6em;
+    }
+}
+
+.cverde{
+    display: table-cell;
+    background-image: linear-gradient(260deg, #73E900, #60DB06, #4DCD0D, #3ABF13, #26B019, #13A220, #009426);
+    border-radius: 0.5em;
+    font-size: 0.9em;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin-bottom: 10%;
+    color: white;
+}
+@media (max-width: 600px){
+    .cverde{
+        font-size: 0.8em;
+    }
+}
+
+
+.crojo{
+    display: table-cell;
+    vertical-align: middle;
+    background-image: linear-gradient(260deg, #FF0832, #ED073A, #DB0542, #CA044B, #B80353, #A6015B, #940063
+    );
+    border-radius: 0.5em;
+    font-size: 0.9em;
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10%;
+    color: white;    
+}
+@media (max-width: 600px){
+    .crojo{
+        font-size: 0.7em;
+    }
+}
+.nameindicador{
+    font-weight: 700;
+    display: flex;
+    justify-content: left;
+    margin-left: 0.8em;
+    padding-top: 0.8em;
+    color: #0031FF;
+}
+.numberpptn{
+    font-size: 2em;
+    color: #031687;
+}
+@media (max-width: 600px){
+    .numberpptn{
+        font-size: 1.7em;
+    }
+    .nameindicador{
+        font-size: 0.9em;
+    }
+}
+.footer{
+    background-color: transparent;
+}
+.text{
+    color: #051687;
+    font-size: 0.9em;
+}
+.tittle{
+    font-size: 0.9em;
+}
